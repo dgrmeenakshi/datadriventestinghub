@@ -1,0 +1,7 @@
+[main] DEBUG devpinoyLogger  - Config File loaded !!
+[main] DEBUG devpinoyLogger  - Object Repo File loaded !!
+[main] DEBUG devpinoyLogger  - chrome launched !!
+[main] DEBUG devpinoyLogger  - Navigate to https://www.way2automation.com/angularjs-protractor/banking/#/login
+[main] DEBUG devpinoyLogger  - Inside Login Test
+[main] DEBUG devpinoyLogger  - Logged in Successfully
+[main] DEBUG devpinoyLogger  - Test execution completed !!!
