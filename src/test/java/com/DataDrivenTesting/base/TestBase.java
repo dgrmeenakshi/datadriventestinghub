@@ -1,6 +1,8 @@
 package com.DataDrivenTesting.base;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -49,9 +51,18 @@ public class TestBase {
             driver = new InternetExplorerDriver();
         }
         driver.get(config.getProperty("url"));
-        log.debug("Navigate to "+ config.getProperty("url"));
+        log.debug("Navigate to " + config.getProperty("url"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    public boolean isElementPresent(By by) {
+        try {
+            driver.findElement(by);
+            return true;
+        } catch (NoSuchElementException exception) {
+            return false;
+        }
     }
 
     @AfterSuite

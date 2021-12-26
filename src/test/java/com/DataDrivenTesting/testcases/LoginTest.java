@@ -2,6 +2,7 @@ package com.DataDrivenTesting.testcases;
 
 import com.DataDrivenTesting.base.TestBase;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -10,7 +11,9 @@ public class LoginTest extends TestBase {
     public void loginAsManager() throws InterruptedException {
         log.debug("Inside Login Test");
         driver.findElement(By.cssSelector(OR.getProperty("bml"))).click();
-        Thread.sleep(1000);
+        Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("buttonAC"))),"Element not displayed");
         log.debug("Logged in Successfully");
     }
+
+
 }
