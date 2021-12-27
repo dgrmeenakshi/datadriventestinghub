@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class LoginTest extends TestBase {
+public class BankManagerLoginTest extends TestBase {
     @Test
     public void loginAsManager() throws InterruptedException {
         log.debug("Inside Login Test");
@@ -14,6 +14,4 @@ public class LoginTest extends TestBase {
         Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("buttonAC"))),"Element not displayed");
         log.debug("Logged in Successfully");
     }
-
-
 }
